@@ -66,11 +66,11 @@ public class Adapter_Paragraph extends ArrayAdapter {
 
     private void openDetail(String id, String name)
     {
-        Intent intent=new Intent(context, Activity_Dialog_Panagraph.class);
+        Intent intent=new Intent(context, Activity_Detail.class);
         Bundle bundle=new Bundle();
         bundle.putString("ID",id);
         bundle.putString("NAME",name);
-        intent.putExtra("UPDATE", bundle);
+        intent.putExtra("DETAIL", bundle);
         context.startActivity(intent);
     }
 }

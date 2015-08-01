@@ -22,6 +22,10 @@
         <activity android:name=".Activity_Paragraph_Dialog_Insert"
             android:label="@string/text_title_dialog_panagraph"
             android:theme="@android:style/Theme.Holo.Dialog"/>
+        <activity android:name=".Activity_Detail"/>
+        <activity android:name=".Activity_Detail_Dialog"
+            android:label="@string/text_title_dialog_detail"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
     </application>
 
 

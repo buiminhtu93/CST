@@ -29,7 +29,7 @@ public class Adapter_Detail extends ArrayAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=View.inflate(context,resource,null);
-        /*TextView tvContent=(TextView)view.findViewById(R.id.textViewBubbleDetail);
+        TextView tvContent=(TextView)view.findViewById(R.id.textViewBubbleDetail);
         TextView tvTitleContent=(TextView)view.findViewById(R.id.textViewBubbleTitleDetail);
         LinearLayout frmLayout=(LinearLayout)view.findViewById(R.id.framelayoutBubbleDetail);
         ImageView imgView=(ImageView)view.findViewById(R.id.imageViewBubbleItem);
@@ -38,16 +38,16 @@ public class Adapter_Detail extends ArrayAdapter {
         String person=item.getPerson();
         if (person.equals("teacher"))
         {
-            frmLayout.setBackgroundResource(R.color.color_bubble_left);
-            imgView.setBackgroundResource(R.drawable.teacher_icon);
+            frmLayout.setBackgroundResource(R.color.color_detail_left);
+            imgView.setBackgroundResource(R.drawable.teacher_ico);
             tvTitleContent.setText("Me");
         }
         else
         {
-            frmLayout.setBackgroundResource(R.color.color_bubble_right);
+            frmLayout.setBackgroundResource(R.color.color_detail_right);
             imgView.setBackgroundResource(R.drawable.student_icon);
             tvTitleContent.setText("You");
-        }*/
+        }
         return view;
     }
 }

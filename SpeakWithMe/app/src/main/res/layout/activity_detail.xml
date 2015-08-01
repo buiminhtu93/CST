@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/text_title"
-            android:id="@+id/textView"
+            android:id="@+id/textViewDetailTitle"
             android:layout_marginTop="@dimen/margin_title"
             android:layout_marginBottom="@dimen/margin_title"
             android:layout_weight="0.9"
@@ -41,7 +41,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/listViewDetail"
         android:layout_gravity="center_vertical"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:dividerHeight="0dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -55,9 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/editTextInputDetail"
-            android:layout_weight="0.9"
+            android:layout_weight="0.95"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:hint="@string/text_input"
+            android:textColor="@color/color_text_title"/>
 
         <ImageButton
             android:layout_width="35dp"

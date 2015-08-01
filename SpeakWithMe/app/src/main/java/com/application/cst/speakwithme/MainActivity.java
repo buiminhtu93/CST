@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     List<Item_Paragraph> itemParagraphList;
     SQLDatabaseSource db;
     Adapter_Paragraph adapter_paragraph;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

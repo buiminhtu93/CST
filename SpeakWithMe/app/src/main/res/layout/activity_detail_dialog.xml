@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingLeft="@dimen/margin_dialog"
+    android:paddingRight="@dimen/margin_dialog"
+    android:paddingTop="@dimen/margin_dialog"
+    android:paddingBottom="@dimen/margin_dialog"
     android:layout_height="match_parent">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInputDetailDialog"
+        android:textColor="@color/color_text_title"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_title">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/teacher"
+            android:layout_weight="0.3"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/margin_title"
+            android:gravity="right" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchDetail"
+            android:layout_weight="0.3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/student"
+            android:layout_weight="0.3"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/margin_title"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:id="@+id/buttonOkDialogDetail"
+            android:layout_weight="0.3"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancle"
+            android:id="@+id/buttonCancleDialogDetail"
+            android:layout_weight="0.3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:id="@+id/buttonDeleteDialogDetail"
+            android:layout_weight="0.3"/>
+
+    </LinearLayout>
 </LinearLayout>

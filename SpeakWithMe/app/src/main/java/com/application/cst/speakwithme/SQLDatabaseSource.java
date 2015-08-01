@@ -43,7 +43,7 @@ public class SQLDatabaseSource {
     public List<Item_Detail> getlistDetail(String IDparagraph)
     {
         List<Item_Detail> list=new ArrayList<>();
-        String lenh="SELECT * FROM DETAIL WHERE IDParagraph='"+IDparagraph+"' ORDER BY IDDetail ASC";
+        String lenh="SELECT * FROM DETAIL WHERE IDPanagraph='"+IDparagraph+"' ORDER BY IDDetail ASC";
         Cursor c=db.rawQuery(lenh, null);
         c.moveToFirst();
         while (!c.isAfterLast())
@@ -70,30 +70,30 @@ public class SQLDatabaseSource {
 
     public void update_Paragraph_Detail(Item_Paragraph paragraph)
     {
-        String lenh="UPDATE PARAGRAPH SET DetailParagraph='"+paragraph.getDetail()+"' WHERE IDParagraph='"+paragraph.getIDParagraph()+"'";
+        String lenh="UPDATE PARAGRAPH SET Detail='"+paragraph.getDetail()+"' WHERE IDParagraph='"+paragraph.getIDParagraph()+"'";
         db.execSQL(lenh);
     }
 
-    public void update_Detail_Content(Item_Detail detail)
+    public void update_Detail(Item_Detail detail)
     {
-        String lenh="UPDATE PARAGRAPH SET DetailParagraph='"+detail.getContent()+ detail.getPerson()+"' WHERE IDParagraph='"+detail.getIDDetail()+"'";
+        String lenh="UPDATE DETAIL SET Content='"+detail.getContent() +"', Person='"+ detail.getPerson()+"' WHERE IDDetail='"+detail.getIDDetail()+"'";
         db.execSQL(lenh);
     }
 
 
     public void update_Setting_Language(Item_Setting setting)
     {
-        String lenh="UPDATE PARAGRAPH SET DetailParagraph='"+setting.getLanguage()+"' WHERE IDParagraph='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING Language='"+setting.getLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
         db.execSQL(lenh);
     }
     public void update_Setting_Speed(Item_Setting setting)
     {
-        String lenh="UPDATE PARAGRAPH SET DetailParagraph='"+setting.getSpeed()+"' WHERE IDParagraph='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING SET Speed='"+setting.getSpeed()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
         db.execSQL(lenh);
     }
     public void update_Setting_Sex(Item_Setting setting)
     {
-        String lenh="UPDATE PARAGRAPH SET DetailParagraph='"+setting.getSex()+"' WHERE IDParagraph='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING SET Sex='"+setting.getSex()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
         db.execSQL(lenh);
     }
 
@@ -105,7 +105,7 @@ public class SQLDatabaseSource {
         db.execSQL(lenh);
     }
 
-    public void Insert_Detail(Item_Detail detail,String IDPanagraph)
+    public void Insert_Detail(Item_Detail detail)
     {
         String lenh="INSERT INTO DETAIL VALUES ('"
                 +detail.getIDDetail() +"', '"
