@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 
     ListView listview;
     ImageButton imgbuttonAdd;
+    ImageButton imgbuttonSetting;
     List<Item_Paragraph> itemParagraphList;
     SQLDatabaseSource db;
     Adapter_Paragraph adapter_paragraph;
@@ -31,11 +32,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
+        imgbuttonSetting=(ImageButton)findViewById(R.id.imagebuttonSetting);
         itemParagraphList=new ArrayList<>();
         imgbuttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openDialogPanagraphInsert();
+            }
+        });
+        imgbuttonSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, Activity_Setting.class);
+                startActivity(intent);
             }
         });
         registerForContextMenu(listview);

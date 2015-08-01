@@ -95,7 +95,8 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/setting_icon"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:id="@+id/imagebuttonSetting"/>
         </FrameLayout>
 
     </LinearLayout>

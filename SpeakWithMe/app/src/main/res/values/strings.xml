@@ -5,6 +5,7 @@
     <string name="text_title">Speak with me</string>
     <string name="text_dialog_paragraph">Insert Name for Paragraph</string>
     <string name="text_title_dialog_detail">Update Content</string>
+    <string name="text_title_setting">Setting</string>
     <string name="delete">Delete</string>
     <string name="update">Update</string>
     <string name="share">Share</string>
@@ -20,7 +21,7 @@
     <string-array name="array_language">
         <item>VietNamese</item>
         <item>English</item>
-        <item>japanese</item>
+        <item>Japanese</item>
     </string-array>
 
     <string-array name="array_speed">

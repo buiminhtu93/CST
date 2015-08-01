@@ -81,21 +81,21 @@ public class SQLDatabaseSource {
     }
 
 
-    public void update_Setting_FirstLanguage(Item_Setting setting)
+    public void update_Setting_FirstLanguage(String value)
     {
-        String lenh="UPDATE SETTING FirstLanguage='"+setting.getFirstLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING SET FirstLanguage='"+value+"' WHERE IDSetting='1'";
         db.execSQL(lenh);
     }
 
-    public void update_Setting_SecondLanguage(Item_Setting setting)
+    public void update_Setting_SecondLanguage(String value)
     {
-        String lenh="UPDATE SETTING SecondLanguage='"+setting.getFirstLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING SET SecondLanguage='"+value+"' WHERE IDSetting='1'";
         db.execSQL(lenh);
     }
 
-    public void update_Setting_Speed(Item_Setting setting)
+    public void update_Setting_Speed(String value)
     {
-        String lenh="UPDATE SETTING SET Speed='"+setting.getSpeed()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING SET Speed='"+value+"' WHERE IDSetting='1'";
         db.execSQL(lenh);
     }
 
@@ -133,7 +133,7 @@ public class SQLDatabaseSource {
     //setting
     public Item_Setting getSettingItem()
     {
-        String lenh="SELECT * FROM SETTING";
+        String lenh="SELECT * FROM SETTING WHERE IDSetting='1'";
         Cursor c=db.rawQuery(lenh,null);
         c.moveToFirst();
         Item_Setting item=new Item_Setting();
