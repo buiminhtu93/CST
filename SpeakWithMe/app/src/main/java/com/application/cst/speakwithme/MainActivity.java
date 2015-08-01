@@ -1,10 +1,12 @@
 package com.application.cst.speakwithme;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -24,6 +26,12 @@ public class MainActivity extends Activity {
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
         itemParagraphList=new ArrayList<>();
+        imgbuttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialogPanagraph();
+            }
+        });
     }
 
     @Override
@@ -51,5 +59,11 @@ public class MainActivity extends Activity {
     public void loadData()
     {
 
+    }
+
+    public void openDialogPanagraph()
+    {
+        Intent intent=new Intent(MainActivity.this, Activity_Dialog_Panagraph.class);
+        startActivity(intent);
     }
 }

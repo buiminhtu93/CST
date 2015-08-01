@@ -7,4 +7,5 @@
     <string name="delete">Delete</string>
     <string name="ok">Ok</string>
     <string name="cancle">Cancle</string>
+    <string name="text_title_dialog_panagraph">Input Name for Panagaraph</string>
 </resources>

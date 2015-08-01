@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity_Dialog_Panagraph"
+            android:label="@string/text_title_dialog_panagraph"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
     </application>
 
 </manifest>
