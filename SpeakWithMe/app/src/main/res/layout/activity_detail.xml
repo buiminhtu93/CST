@@ -4,7 +4,6 @@
     android:background="@color/color_background_body"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -22,19 +21,18 @@
             android:layout_weight="0.9"
             android:layout_gravity="center_vertical"
             android:textColor="@color/color_text_titlebar"/>
-        
+
         <ImageButton
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="@drawable/add_icon"
+            android:background="@drawable/play_icon"
             android:layout_margin="@dimen/margin_title"
             android:id="@+id/imageButtonAddPanagraph"/>
     </LinearLayout>
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listViewPanagraph"
+        android:id="@+id/listViewDetail"
         android:layout_gravity="center_vertical"
         android:layout_weight="1" />
 
@@ -46,57 +44,20 @@
         android:weightSum="1"
         android:padding="@dimen/margin_title">
 
-
-        <FrameLayout
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:layout_gravity="center">
+            android:id="@+id/editText2"
+            android:layout_weight="0.9"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
         <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/home_icon"
-            android:layout_gravity="center" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/send_icon"
             android:layout_gravity="center"
-            >
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/text_to_speech_icon"
-                android:layout_gravity="center" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:layout_gravity="center">
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/chat_icon"
-                android:layout_gravity="center" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:layout_gravity="center">
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/setting_icon"
-                android:layout_gravity="center" />
-        </FrameLayout>
-
+            android:layout_marginLeft="@dimen/margin_title"
+            />
     </LinearLayout>
-
-
 </LinearLayout>

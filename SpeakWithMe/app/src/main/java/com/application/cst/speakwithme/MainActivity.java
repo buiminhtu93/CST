@@ -8,17 +8,22 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends Activity {
 
     ListView listview;
     ImageButton imgbuttonAdd;
+    List<Item_Paragraph> itemParagraphList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
+        itemParagraphList=new ArrayList<>();
     }
 
     @Override
