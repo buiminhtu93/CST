@@ -14,4 +14,18 @@
     <string name="text_input">Input here...</string>
     <string name="teacher">Teacher</string>
     <string name="student">Student</string>
+    <string name="first_language">First Language</string>
+    <string name="second_language">Second Language</string>
+    <string name="speed">Speed</string>
+    <string-array name="array_language">
+        <item>VietNamese</item>
+        <item>English</item>
+        <item>japanese</item>
+    </string-array>
+
+    <string-array name="array_speed">
+        <item>Slow</item>
+        <item>Quick</item>
+    </string-array>
+
 </resources>

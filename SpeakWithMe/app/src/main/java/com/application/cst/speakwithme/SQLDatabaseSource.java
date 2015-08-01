@@ -81,19 +81,21 @@ public class SQLDatabaseSource {
     }
 
 
-    public void update_Setting_Language(Item_Setting setting)
+    public void update_Setting_FirstLanguage(Item_Setting setting)
     {
-        String lenh="UPDATE SETTING Language='"+setting.getLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
+        String lenh="UPDATE SETTING FirstLanguage='"+setting.getFirstLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
         db.execSQL(lenh);
     }
+
+    public void update_Setting_SecondLanguage(Item_Setting setting)
+    {
+        String lenh="UPDATE SETTING SecondLanguage='"+setting.getFirstLanguage()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
+        db.execSQL(lenh);
+    }
+
     public void update_Setting_Speed(Item_Setting setting)
     {
         String lenh="UPDATE SETTING SET Speed='"+setting.getSpeed()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
-        db.execSQL(lenh);
-    }
-    public void update_Setting_Sex(Item_Setting setting)
-    {
-        String lenh="UPDATE SETTING SET Sex='"+setting.getSex()+"' WHERE IDSetting='"+setting.getIDSetting()+"'";
         db.execSQL(lenh);
     }
 
@@ -136,7 +138,8 @@ public class SQLDatabaseSource {
         c.moveToFirst();
         Item_Setting item=new Item_Setting();
         item.setIDSetting(c.getString(0));
-        item.setSex(c.getString(1));
+        item.setFirstLanguage(c.getString(1));
+        item.setSecondLanguage(c.getString(2));
         item.setSpeed(c.getString(3));
         return  item;
     }

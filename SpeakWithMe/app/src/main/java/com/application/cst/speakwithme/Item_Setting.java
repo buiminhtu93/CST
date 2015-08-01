@@ -6,42 +6,19 @@ package com.application.cst.speakwithme;
 public class Item_Setting {
 
     String IDSetting;
-    String Language;
+    String FirstLanguage;
+    String SecondLanguage;
     String Speed;
-    String Sex;
 
 
-    public Item_Setting(String idSetting,String language,String speed,String sex)
-    {
-        IDSetting=idSetting;
-        Language=language;
-        Speed=speed;
-        Sex=sex;
+    public Item_Setting() {
     }
 
-    public  Item_Setting(){};
-    public String getSex() {
-        return Sex;
-    }
-
-    public void setSex(String sex) {
-        Sex = sex;
-    }
-
-    public String getSpeed() {
-        return Speed;
-    }
-
-    public void setSpeed(String speed) {
+    public Item_Setting(String IDSetting, String firstLanguage, String secondLanguage, String speed) {
+        this.IDSetting = IDSetting;
+        FirstLanguage = firstLanguage;
+        SecondLanguage = secondLanguage;
         Speed = speed;
-    }
-
-    public String getLanguage() {
-        return Language;
-    }
-
-    public void setLanguage(String language) {
-        Language = language;
     }
 
     public String getIDSetting() {
@@ -50,5 +27,29 @@ public class Item_Setting {
 
     public void setIDSetting(String IDSetting) {
         this.IDSetting = IDSetting;
+    }
+
+    public String getFirstLanguage() {
+        return FirstLanguage;
+    }
+
+    public void setFirstLanguage(String firstLanguage) {
+        FirstLanguage = firstLanguage;
+    }
+
+    public String getSecondLanguage() {
+        return SecondLanguage;
+    }
+
+    public void setSecondLanguage(String secondLanguage) {
+        SecondLanguage = secondLanguage;
+    }
+
+    public String getSpeed() {
+        return Speed;
+    }
+
+    public void setSpeed(String speed) {
+        Speed = speed;
     }
 }

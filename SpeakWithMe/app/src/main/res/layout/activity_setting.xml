@@ -1,6 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_body"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background_title"
+        android:weightSum="1"
+        android:layout_marginBottom="@dimen/margin_title">
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/back_icon"
+            android:layout_margin="@dimen/margin_title"
+            android:id="@+id/imageButtonBackDetail"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_title"
+            android:id="@+id/textViewDetailTitle"
+            android:layout_marginTop="@dimen/margin_title"
+            android:layout_marginBottom="@dimen/margin_title"
+            android:layout_weight="0.9"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_titlebar"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/first_language"
+        android:textColor="@color/color_text_title"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:id="@+id/textView2" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:id="@+id/spinnerFirstLanguage"
+        android:entries="@array/array_language"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/second_language"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:textColor="@color/color_text_title"
+        android:id="@+id/textView3" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:id="@+id/spinnerSecondLanguage"
+        android:entries="@array/array_language"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/speed"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:textColor="@color/color_text_title"
+        android:id="@+id/textView4" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_title"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:layout_marginRight="@dimen/margin_title"
+        android:id="@+id/spinnerSpeed"
+        android:entries="@array/array_speed"/>
 </LinearLayout>

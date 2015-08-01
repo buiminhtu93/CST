@@ -26,6 +26,7 @@
         <activity android:name=".Activity_Detail_Dialog"
             android:label="@string/text_title_dialog_detail"
             android:theme="@android:style/Theme.Holo.Dialog"/>
+        <activity android:name=".Activity_Detail_Play"/>
     </application>
 
 

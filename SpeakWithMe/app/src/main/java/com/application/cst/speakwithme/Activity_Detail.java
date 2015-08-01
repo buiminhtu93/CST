@@ -25,6 +25,7 @@ public class Activity_Detail extends Activity {
     List<Item_Detail> detailList;
     Adapter_Detail adapter;
     String ID;
+    String NAME;
     Bundle bundle;
     Intent intent;
     ListView listView;
@@ -32,6 +33,7 @@ public class Activity_Detail extends Activity {
     EditText edtInput;
     String person="student";
     ImageButton btnSendDetail;
+    ImageButton imgbuttonPlay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,7 @@ public class Activity_Detail extends Activity {
         edtInput=(EditText)findViewById(R.id.editTextInputDetail);
         bundle=intent.getBundleExtra("DETAIL");
         ID=bundle.getString("ID");
-        String NAME=bundle.getString("NAME");
+        NAME=bundle.getString("NAME");
         tvTitleTextBar=(TextView)findViewById(R.id.textViewDetailTitle);
         tvTitleTextBar.setText(NAME);
         loadData(ID);
@@ -59,7 +61,14 @@ public class Activity_Detail extends Activity {
                 String strid = detailList.get(position).getIDDetail();
                 String strcontent = detailList.get(position).getContent();
                 String strperson = detailList.get(position).getPerson();
-                openDialog(strid,strcontent,strperson);
+                openDialog(strid, strcontent, strperson);
+            }
+        });
+        imgbuttonPlay=(ImageButton)findViewById(R.id.imageButtonPlayDetail);
+        imgbuttonPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPlay(ID,NAME);
             }
         });
     }
@@ -105,10 +114,20 @@ public class Activity_Detail extends Activity {
     {
         Intent intent=new Intent(Activity_Detail.this, Activity_Detail_Dialog.class);
         Bundle bundle=new Bundle();
+        bundle.putString("ID", id);
+        bundle.putString("NAME", name);
+        bundle.putString("PERSON", person);
+        intent.putExtra("DETAIL_UPDATE", bundle);
+        startActivity(intent);
+    }
+
+    public void openPlay(String id, String name)
+    {
+        Intent intent=new Intent(Activity_Detail.this, Activity_Detail_Play.class);
+        Bundle bundle=new Bundle();
         bundle.putString("ID",id);
         bundle.putString("NAME",name);
-        bundle.putString("PERSON",person);
-        intent.putExtra("DETAIL_UPDATE",bundle);
+        intent.putExtra("DETAIL_PLAY", bundle);
         startActivity(intent);
     }
 
