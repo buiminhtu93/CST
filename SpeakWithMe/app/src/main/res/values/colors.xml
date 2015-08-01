@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_text_titlebar">#ffffff</color>
+    <color name="color_background_title">#3C3F41</color>
+    <color name="color_background_body">#2B2B2B</color>
+    <color name="color_text_detail">#ffffff</color>
+    <color name="color_text_title">#E8BF55</color>
+    <color name="color_text_description">#BBBBBB</color>
+</resources>
