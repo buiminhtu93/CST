@@ -19,6 +19,8 @@ public class MainActivity extends Activity {
     ListView listview;
     ImageButton imgbuttonAdd;
     List<Item_Paragraph> itemParagraphList;
+    SQLDatabaseSource db;
+    Adapter_Paragraph adapter_paragraph;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class MainActivity extends Activity {
                 openDialogPanagraph();
             }
         });
+        loadData();
     }
 
     @Override
@@ -58,7 +61,10 @@ public class MainActivity extends Activity {
 
     public void loadData()
     {
-
+        db=new SQLDatabaseSource(this);
+        itemParagraphList=db.getListParagraph();
+        adapter_paragraph=new Adapter_Paragraph(this, R.layout.item_paragraph_activity,itemParagraphList);
+        listview.setAdapter(adapter_paragraph);
     }
 
     public void openDialogPanagraph()

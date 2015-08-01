@@ -18,6 +18,8 @@ public class Item_Setting {
         Speed=speed;
         Sex=sex;
     }
+
+    public  Item_Setting(){};
     public String getSex() {
         return Sex;
     }

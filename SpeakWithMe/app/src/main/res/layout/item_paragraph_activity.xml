@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
-            android:id="@+id/textView2"
+            android:id="@+id/textViewNameParagraph"
             android:textColor="@color/color_text_title"/>
 
         <TextView
@@ -33,7 +33,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Small Text"
             android:textColor="@color/color_text_description"
-            android:id="@+id/textView3" />
+            android:id="@+id/textViewDetailParagraph" />
     </LinearLayout>
 
     <ImageButton

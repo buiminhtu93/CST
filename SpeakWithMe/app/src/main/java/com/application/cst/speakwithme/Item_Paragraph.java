@@ -21,6 +21,7 @@ public class Item_Paragraph {
         Name=name;
     }
 
+    public Item_Paragraph(){};
     public String getName() {
         return Name;
     }

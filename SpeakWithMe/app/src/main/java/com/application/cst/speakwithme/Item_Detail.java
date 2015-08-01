@@ -19,6 +19,8 @@ public class Item_Detail {
         Content=content;
         Person=person;
     }
+
+    public Item_Detail(){};
     public String getPerson() {
         return Person;
     }
