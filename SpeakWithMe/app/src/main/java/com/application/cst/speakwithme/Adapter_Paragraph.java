@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -46,6 +47,30 @@ public class Adapter_Paragraph extends ArrayAdapter {
                 context.startActivity(intent);
             }
         });
+
+        tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDetail(paragraph.getIDParagraph().toString(),paragraph.getName().toString());
+            }
+        });
+
+        tvDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDetail(paragraph.getIDParagraph().toString(),paragraph.getName().toString());
+            }
+        });
         return view;
+    }
+
+    private void openDetail(String id, String name)
+    {
+        Intent intent=new Intent(context, Activity_Dialog_Panagraph.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("ID",id);
+        bundle.putString("NAME",name);
+        intent.putExtra("UPDATE", bundle);
+        context.startActivity(intent);
     }
 }

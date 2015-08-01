@@ -6,4 +6,7 @@
     <color name="color_text_detail">#ffffff</color>
     <color name="color_text_title">#E8BF55</color>
     <color name="color_text_description">#BBBBBB</color>
+    <color name="color_detail_left">#2A2A2A</color>
+    <color name="color_detail_right">#0084FF</color>
+    <color name="color_title_item">#B2B2B2</color>
 </resources>

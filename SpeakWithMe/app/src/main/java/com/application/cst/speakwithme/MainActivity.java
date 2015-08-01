@@ -31,7 +31,6 @@ public class MainActivity extends Activity {
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
         itemParagraphList=new ArrayList<>();
-        listview.setLongClickable(true);
         imgbuttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +39,6 @@ public class MainActivity extends Activity {
         });
         registerForContextMenu(listview);
         loadData();
-
 
     }
 

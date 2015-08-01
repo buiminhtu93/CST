@@ -16,9 +16,10 @@ public class Item_Paragraph {
         Detail = detail;
     }
 
-    public Item_Paragraph(String idParagraph,String name){
+    public Item_Paragraph(String idParagraph,String name, String detail){
         IDParagraph=idParagraph;
         Name=name;
+        Detail=detail;
     }
 
     public Item_Paragraph(){};

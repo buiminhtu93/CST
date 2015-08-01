@@ -54,7 +54,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/editTextInputDetail"
             android:layout_weight="0.9"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:background="@android:color/transparent"/>
@@ -62,7 +62,7 @@
         <ImageButton
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:id="@+id/imageButton2"
+            android:id="@+id/imageButtonSendDetail"
             android:background="@drawable/send_icon"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/margin_title"
