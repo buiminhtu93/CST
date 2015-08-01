@@ -65,7 +65,8 @@
             <ImageButton
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/home_icon" />
+                android:background="@drawable/text_to_speech_icon"
+                android:layout_gravity="center" />
         </FrameLayout>
 
         <FrameLayout
@@ -75,7 +76,8 @@
             <ImageButton
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/home_icon" />
+                android:background="@drawable/chat_icon"
+                android:layout_gravity="center" />
         </FrameLayout>
 
         <FrameLayout
@@ -85,7 +87,8 @@
             <ImageButton
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/home_icon" />
+                android:background="@drawable/setting_icon"
+                android:layout_gravity="center" />
         </FrameLayout>
 
     </LinearLayout>
