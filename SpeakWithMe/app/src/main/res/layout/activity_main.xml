@@ -27,13 +27,14 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/add_icon"
-            android:layout_margin="@dimen/margin_title" />e
+            android:layout_margin="@dimen/margin_title"
+            android:id="@+id/imageButtonAddPanagraph"/>
     </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:id="@+id/listViewPanagraph"
         android:layout_gravity="center_vertical"
         android:layout_weight="1" />
 

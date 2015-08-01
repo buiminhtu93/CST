@@ -5,14 +5,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+import android.widget.ListView;
 
 
 public class MainActivity extends Activity {
 
+    ListView listview;
+    ImageButton imgbuttonAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        listview=(ListView)findViewById(R.id.listViewPanagraph);
+        imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
     }
 
     @Override
@@ -35,5 +41,10 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void loadData()
+    {
+
     }
 }

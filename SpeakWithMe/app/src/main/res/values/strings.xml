@@ -4,4 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="text_title">Speak with me</string>
     <string name="text_dialog_paragraph">Insert Name for Paragraph</string>
+    <string name="delete">Delete</string>
+    <string name="ok">Ok</string>
+    <string name="cancle">Cancle</string>
 </resources>
