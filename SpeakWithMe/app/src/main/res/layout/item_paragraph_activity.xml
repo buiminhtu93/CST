@@ -39,8 +39,9 @@
     <ImageButton
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonShowDialogParagraph"
         android:background="@drawable/forward_icon"
         android:layout_margin="@dimen/margin_title"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        />
 </LinearLayout>

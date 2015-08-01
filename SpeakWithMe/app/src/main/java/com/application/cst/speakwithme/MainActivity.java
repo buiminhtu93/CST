@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,12 +31,22 @@ public class MainActivity extends Activity {
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
         itemParagraphList=new ArrayList<>();
+        listview.setLongClickable(true);
         imgbuttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openDialogPanagraph();
+                openDialogPanagraphInsert();
             }
         });
+        registerForContextMenu(listview);
+        loadData();
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         loadData();
     }
 
@@ -67,9 +80,47 @@ public class MainActivity extends Activity {
         listview.setAdapter(adapter_paragraph);
     }
 
-    public void openDialogPanagraph()
+    public void openDialogPanagraphUpdate(Item_Paragraph item)
     {
         Intent intent=new Intent(MainActivity.this, Activity_Dialog_Panagraph.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("ID",item.getIDParagraph().toString());
+        bundle.putString("NAME",item.getName().toString());
+        intent.putExtra("UPDATE", bundle);
         startActivity(intent);
+    }
+
+    public void openDialogPanagraphInsert()
+    {
+        Intent intent=new Intent(MainActivity.this, Activity_Paragraph_Dialog_Insert.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_paragraph, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info= (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        int pos=info.position;
+        Item_Paragraph Item=itemParagraphList.get(pos);
+        switch (item.getItemId()){
+            case R.id.itemMenu_delete:
+                itemParagraphList.remove(pos);
+                adapter_paragraph.notifyDataSetChanged();
+                db.Delete_Paragraph(Item);
+                Toast.makeText(getApplicationContext(),"Deleted",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.itemMenu_update:
+                openDialogPanagraphUpdate(Item);
+                break;
+            case R.id.itemMenu_share:
+                Toast.makeText(getApplicationContext(),"Share",Toast.LENGTH_LONG).show();
+                break;
+        }
+        return super.onContextItemSelected(item);
     }
 }

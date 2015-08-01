@@ -63,7 +63,7 @@ public class SQLDatabaseSource {
     //update database
     public void update_Paragraph_Name(Item_Paragraph paragraph)
     {
-        String lenh="UPDATE PARAGRAPH SET NameParagraph='"+paragraph.getName()+"' WHERE IDParagraph='"+paragraph.getIDParagraph()+"'";
+        String lenh="UPDATE PARAGRAPH SET Name='"+paragraph.getName()+"' WHERE IDParagraph='"+paragraph.getIDParagraph()+"'";
         db.execSQL(lenh);
     }
 

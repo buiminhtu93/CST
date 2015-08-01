@@ -10,7 +10,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextInputParagraphDialog"
+        android:id="@+id/editTextInputInsertParagraphDialog"
         android:textColor="@color/color_text_title"
         />
 
@@ -23,21 +23,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ok"
-            android:id="@+id/buttonOkDialogPanagraph"
-            android:layout_weight="0.3"/>
+            android:id="@+id/buttonOkInsertDialogPanagraph"
+            android:layout_weight="0.5"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancle"
-            android:id="@+id/buttonCancleDialogPanagraph"
-            android:layout_weight="0.3"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/delete"
-            android:id="@+id/buttonDeleteDialogPanagraph"
-            android:layout_weight="0.3"/>
+            android:id="@+id/buttonCancleInsertDialogPanagraph"
+            android:layout_weight="0.5"/>
 
     </LinearLayout>
 </LinearLayout>

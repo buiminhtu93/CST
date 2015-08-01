@@ -5,6 +5,8 @@
     <string name="text_title">Speak with me</string>
     <string name="text_dialog_paragraph">Insert Name for Paragraph</string>
     <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="share">Share</string>
     <string name="ok">Ok</string>
     <string name="cancle">Cancle</string>
     <string name="text_title_dialog_panagraph">Input Name for Panagaraph</string>

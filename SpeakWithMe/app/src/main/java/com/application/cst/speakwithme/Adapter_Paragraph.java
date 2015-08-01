@@ -1,9 +1,13 @@
 package com.application.cst.speakwithme;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -26,10 +30,22 @@ public class Adapter_Paragraph extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=View.inflate(context,resource,null);
         TextView tvName=(TextView)view.findViewById(R.id.textViewNameParagraph);
-        Item_Paragraph paragraph=listParagraph.get(position);
+        final Item_Paragraph paragraph=listParagraph.get(position);
         tvName.setText(paragraph.getName().toString());
         TextView tvDetail=(TextView)view.findViewById(R.id.textViewDetailParagraph);
         tvDetail.setText(paragraph.getDetail().toString());
+        ImageButton btnShow=(ImageButton)view.findViewById(R.id.imageButtonShowDialogParagraph);
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, Activity_Dialog_Panagraph.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("ID",paragraph.getIDParagraph().toString());
+                bundle.putString("NAME",paragraph.getName().toString());
+                intent.putExtra("UPDATE", bundle);
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 }
