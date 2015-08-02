@@ -3,4 +3,58 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background_title"
+        android:weightSum="1">
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="@dimen/margin_title"
+            android:background="@drawable/back_icon"
+            android:id="@+id/imageButtonBackTexttoSpeech"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_title_text_to_speech"
+            android:id="@+id/textViewTitleParagraph"
+            android:layout_margin="@dimen/margin_title"
+            android:textColor="@color/color_text_title"
+            android:layout_weight="0.9"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInputTexttoSpeech"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="Input text to speech"
+        android:textColor="@color/color_text_title"
+        android:background="@android:color/transparent"
+        android:layout_margin="@dimen/margin_title"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageButtonSpeechTexttoSpeech"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/siri_icon"
+        android:layout_marginTop="@dimen/margin_title"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonClearInputTexttoSpeech"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/cancle_icon"
+        android:layout_marginTop="50dp"/>
 </LinearLayout>

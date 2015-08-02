@@ -71,7 +71,8 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/text_to_speech_icon"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonTexttoSpeech"/>
         </FrameLayout>
 
         <FrameLayout
@@ -83,7 +84,8 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/chat_icon"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:id="@+id/imageButtonTemplate"/>
         </FrameLayout>
 
         <FrameLayout

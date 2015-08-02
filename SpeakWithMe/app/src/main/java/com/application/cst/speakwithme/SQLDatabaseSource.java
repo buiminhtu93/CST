@@ -144,5 +144,22 @@ public class SQLDatabaseSource {
         return  item;
     }
 
+    public List<Item_Template> getlistTemplate(String first, String second)
+    {
+        List<Item_Template> list=new ArrayList<>();
+        String lenh="SELECT " + first +" , " + second +" FROM TEMPLATE";
+        Cursor c=db.rawQuery(lenh, null);
+        c.moveToFirst();
+        while (!c.isAfterLast())
+        {
+            Item_Template item=new Item_Template();
+            item.setFirst(c.getString(0));
+            item.setSecond(c.getString(1));
+            list.add(item);
+            c.moveToNext();
+        }
+        return list;
+    }
+
 
 }

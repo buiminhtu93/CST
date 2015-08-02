@@ -28,6 +28,8 @@
             android:theme="@android:style/Theme.Holo.Dialog"/>
         <activity android:name=".Activity_Detail_Play"/>
         <activity android:name=".Activity_Setting"/>
+        <activity android:name=".Activity_Text_to_Speech"/>
+        <activity android:name=".Activity_Template"/>
     </application>
 
 

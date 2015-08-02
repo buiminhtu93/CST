@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_body"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background_title"
+        android:weightSum="1">
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/back_icon"
+            android:layout_margin="@dimen/margin_title"
+            android:id="@+id/imageButtonBackTemplate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/text_title_template"
+            android:id="@+id/textViewDetailTitle"
+            android:layout_marginTop="@dimen/margin_title"
+            android:layout_marginBottom="@dimen/margin_title"
+            android:layout_weight="0.9"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_titlebar"/>
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewTemplate"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+
+</LinearLayout>

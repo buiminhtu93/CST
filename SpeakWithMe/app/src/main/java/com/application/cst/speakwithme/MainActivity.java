@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
     ListView listview;
     ImageButton imgbuttonAdd;
     ImageButton imgbuttonSetting;
+    ImageButton imgbuttonTexttoSpeech;
+    ImageButton imgbuttonTemplate;
     List<Item_Paragraph> itemParagraphList;
     SQLDatabaseSource db;
     Adapter_Paragraph adapter_paragraph;
@@ -33,6 +35,8 @@ public class MainActivity extends Activity {
         listview=(ListView)findViewById(R.id.listViewPanagraph);
         imgbuttonAdd=(ImageButton)findViewById(R.id.imageButtonAddPanagraph);
         imgbuttonSetting=(ImageButton)findViewById(R.id.imagebuttonSetting);
+        imgbuttonTexttoSpeech=(ImageButton)findViewById(R.id.imageButtonTexttoSpeech);
+        imgbuttonTemplate=(ImageButton)findViewById(R.id.imageButtonTemplate);
         itemParagraphList=new ArrayList<>();
         imgbuttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +48,20 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this, Activity_Setting.class);
+                startActivity(intent);
+            }
+        });
+        imgbuttonTexttoSpeech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, Activity_Text_to_Speech.class);
+                startActivity(intent);
+            }
+        });
+        imgbuttonTemplate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, Activity_Template.class);
                 startActivity(intent);
             }
         });
