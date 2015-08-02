@@ -137,6 +137,9 @@ public class Activity_Detail_Play extends Activity {
                         handler.sendMessage(msg);
                         Item_Detail item = detailList.get(i);
                         long time = 0;
+                        if (Second.equals("Japanese"))
+                            time=6000;
+                    else
                         time = item.getContent().length() * 90;
                         SystemClock.sleep(time);
 
