@@ -17,6 +17,8 @@ public class Activity_Text_to_Speech extends Activity {
     SQLDatabaseSource db;
     String strSpeak="";
     EditText edtInput;
+    String First;
+    String Second;
     TextToSpeech tts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +26,16 @@ public class Activity_Text_to_Speech extends Activity {
         setContentView(R.layout.activity_text_to_speech);
         db = new SQLDatabaseSource(this);
         edtInput=(EditText)findViewById(R.id.editTextInputTexttoSpeech);
+        loadSetting();
         tts=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS) {
-                    int result=tts.setLanguage(Locale.US);
+                    int result;
+                    if (Second.equals("Japanese"))
+                        result=tts.setLanguage(Locale.JAPAN);
+                    else
+                        result=tts.setLanguage(Locale.US);
                     double rate=0.8f;
                     tts.setSpeechRate((float)rate);
                     tts.setPitch((float)rate);
@@ -71,5 +78,13 @@ public class Activity_Text_to_Speech extends Activity {
                 finish();
             }
         });
+    }
+
+    public void loadSetting()
+    {
+        Item_Setting item=new Item_Setting();
+        item=db.getSettingItem();
+        First=item.getFirstLanguage().toString();
+        Second=item.getSecondLanguage().toString();
     }
 }

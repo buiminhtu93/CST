@@ -33,6 +33,8 @@ public class Activity_Detail_Play extends Activity {
     ListView listView;
     TextView tvTitle;
     TextToSpeech tts;
+    String First;
+    String Second;
     int count=0;
 
     @Override
@@ -57,11 +59,16 @@ public class Activity_Detail_Play extends Activity {
         ID = bundle.getString("ID");
         String NAME = bundle.getString("NAME");
         tvTitle.setText(NAME);
+        loadSetting();
         tts=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS) {
-                    int result=tts.setLanguage(Locale.US);
+                    int result;
+                    if (Second.equals("Japanese"))
+                        result=tts.setLanguage(Locale.JAPAN);
+                    else
+                        result=tts.setLanguage(Locale.US);
                     double rate=0.8f;
                     tts.setSpeechRate((float)rate);
                     tts.setPitch((float)rate);
@@ -106,6 +113,14 @@ public class Activity_Detail_Play extends Activity {
         listView=(ListView)findViewById(R.id.listViewDetailPlay);
         adapter=new Adapter_Detail(this, R.layout.item_detail,tam);
         listView.setAdapter(adapter);
+    }
+
+    public void loadSetting()
+    {
+        Item_Setting item=new Item_Setting();
+        item=db.getSettingItem();
+        First=item.getFirstLanguage().toString();
+        Second=item.getSecondLanguage().toString();
     }
 
     private void doStart() {
